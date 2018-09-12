@@ -62,6 +62,6 @@ def load_embeddings(params, source):
     if params.max_vocab > 0:
         dico.prune(params.max_vocab)
         emb = emb[:params.max_vocab]
-    emb = emb.cuda()
+    #emb = emb.cuda()
     emb = emb / emb.norm(2, 1, keepdim=True).expand_as(emb)
     return dico, emb

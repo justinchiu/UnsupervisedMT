@@ -47,7 +47,8 @@ def get_s2t_scores(src_emb, tgt_emb, s2t_translations, temperature, bs=256):
     """
     assert s2t_translations.size(0) == src_emb.size(0)
     all_scores = []
-    _s2t_translations = s2t_translations.transpose(0, 1).cuda()
+    #_s2t_translations = s2t_translations.transpose(0, 1).cuda()
+    _s2t_translations = s2t_translations.transpose(0, 1)
     for k, i in enumerate(range(0, src_emb.size(0), bs)):
         if k % 50 == 0:
             print(i, end="... ", flush=True)

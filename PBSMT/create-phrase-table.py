@@ -6,7 +6,8 @@ from src.loader import load_embeddings
 from src.utils import get_nn_avg_dist, get_translations, get_s2t_scores
 
 
-N_TRANSLATE = 100
+#N_TRANSLATE = 100
+N_TRANSLATE = 200
 PHRASE_PATTERN = '{src_phrase} ||| {tgt_phrase} ||| {scores} ||| {alignment} ||| {counts} ||| |||'
 
 
